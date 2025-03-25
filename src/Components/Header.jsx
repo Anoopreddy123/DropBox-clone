@@ -9,7 +9,7 @@ import { useContext } from 'react';
 
 export default function Header() {
     const { isAuthenticated, user, logout } = useContext(AuthContext);
-    const navigate = useNavigate(); // Get the navigate function here
+    const navigate = useNavigate(); 
 
     return (
         <Navbar bg="light" expand="lg">

@@ -9,7 +9,7 @@ function Register() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8080/signup', { username, password });
+            const response = await axios.post('http://filecloud.us-east-2.elasticbeanstalk.com/signup', { username, password });
             console.log(response.data);
             // Handle successful signup (e.g., redirect to login)
         } catch (error) {
