@@ -22,7 +22,7 @@ export default function Upload() {
     formData.append("userId", user.userId);
 
     try {
-      const response = await axios.post("http://filecloud.us-east-2.elasticbeanstalk.com/files/uploadfile", formData, {
+      const response = await axios.post("https://filecloud.us-east-2.elasticbeanstalk.com/files/uploadfile", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${localStorage.getItem('token')}` // Include JWT token if required

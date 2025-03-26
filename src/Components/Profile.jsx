@@ -18,7 +18,7 @@ export default function Profile() {
       console.log('Fetching files for user ID:', user.userId);
 
       try {
-        const response = await axios.get(`http://filecloud.us-east-2.elasticbeanstalk.com/file/${user.userId}`, {
+        const response = await axios.get(`https://filecloud.us-east-2.elasticbeanstalk.com/file/${user.userId}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`
           }
@@ -35,7 +35,7 @@ export default function Profile() {
 
   const handleDownload = async (fileName) => {
     try {
-      const response = await axios.get(`http://filecloud.us-east-2.elasticbeanstalk.com/files/${fileName}`, {
+      const response = await axios.get(`https://filecloud.us-east-2.elasticbeanstalk.com/files/${fileName}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`
         },

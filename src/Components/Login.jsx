@@ -15,7 +15,7 @@ function Login() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post('http://filecloud.us-east-2.elasticbeanstalk.com/login', { username, password });
+            const response = await axios.post('https://filecloud.us-east-2.elasticbeanstalk.com/login', { username, password });
             const { jwt, userId } = response.data;
             login(jwt, userId, username); // Use context login method
             navigate('/profile', { state: { username, userId } }); // Navigate to Profile

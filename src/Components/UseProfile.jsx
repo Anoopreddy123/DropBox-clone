@@ -8,7 +8,7 @@ function UserProfile() {
         const fetchUserInfo = async () => {
             try {
                 const response = await axios.get(
-                    "http://filecloud.us-east-2.elasticbeanstalk.com/api/userinfo",
+                    "https://filecloud.us-east-2.elasticbeanstalk.com/api/userinfo",
                     {
                         headers: {
                             Authorization: `Bearer ${localStorage.getItem("token")}`,
